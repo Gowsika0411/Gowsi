@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UX/UI</title>
+    <link rel="stylesheet" href="css/dashboard_styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+</head>
+
+<body>
+
+    <!--SIDE BAR STARTS HERE-->
+    <div class="sidebar">
+        <div class="logo"></div>
+        <ul class="menu">
+            <li class="">
+                <a href="#">
+                    <i class="fas fa-chart-line"></i>
+                    <span>Dashboard</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fas fa-wallet"></i>
+                    <span>My Expenses</span>
+                </a>
+            </li>
+            <li class="active">
+                <a href="#">
+                    <i class="fas fa-list-alt"></i>
+                    <span>Categories</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fas fa-user"></i>
+                    <span>My Profile</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fas fa-cog"></i>
+                    <span>Settings</span>
+                </a>
+            </li>
+            <li class="logout">
+                <a href="#">
+                    <i class="fas fa-sign-out-alt"></i>
+                    <span>Logout</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <!--SIDE BAR ENDS HERE-->
+
+    <!--MAIN STARTS HERE(Contains header-(title,profile,etc),graphs,table)-->
+
+    <div class="main--content">
+        <div class="header--wrapper">
+            <div class="header--title">
+                <h2>Categories</h2>
+            </div>
+        <div class="user--info">
+            <div class="search--box">
+                <i class="fa-solid fa-search"></i>
+                <input type="text" placeholder="Search">
+            </div>
+            <img src="https://via.placeholder.com/50" alt="profile picture here" />
+
+        </div>    
+    </div>
+    
+    <!--MAIN ENDS HERE-->
+    <!--Recent Expenses Start-->
+    <div class="container">
+    <div class="top-bar">
+      <h2>Recent Expenses</h2>
+      <button class="add-expense-btn">
+        <span class="plus-icon">+</span> Add New Expense
+      </button>
+    </div>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Date</th>
+          <th>Category</th>
+          <th>Notes</th>
+          <th>Price</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>03-12-2025</td>
+          <td>Loan</td>
+          <td>EMI</td>
+          <td class="price">₹67</td>
+          <td>
+            <button class="edit-btn"><i class="far fa-edit"></i></button>
+        </td>
+        </tr>
+        <tr>
+          <td>03-13-2025</td>
+          <td>Utilities</td>
+          <td>Electric Bill</td>
+          <td class="price">₹434</td>
+          <td><button class="edit-btn"><i class="far fa-edit"></i></button></td>
+        </tr>
+        <tr>
+          <td>03-14-2025</td>
+          <td>Rent</td>
+          <td>Monthly Rent</td>
+          <td class="price">₹2,000</td>
+          <td><button class="edit-btn"><i class="far fa-edit"></i></button></td>
+        </tr>
+        <tr>
+          <td>03-15-2025</td>
+          <td>Grocery</td>
+          <td>Weekly shopping</td>
+          <td class="price">₹4,800</td>
+          <td><button class="edit-btn"><i class="far fa-edit"></i></button></td>
+        </tr>
+        <tr>
+          <td>03-16-2025</td>
+          <td>Food</td>
+          <td>Lunch outing</td>
+          <td class="price">₹255</td>
+          <td><button class="edit-btn"><i class="far fa-edit"></i></button></td>
+        </tr>
+        <tr>
+          <td>03-17-2025</td>
+          <td>Internet</td>
+          <td>Wi-Fi bill</td>
+          <td class="price">₹90</td>
+          <td><button class="edit-btn"><i class="far fa-edit"></i></button></td>
+        </tr>
+        <tr>
+          <td>03-18-2025</td>
+          <td>Transport</td>
+          <td>Fuel</td>
+          <td class="price">₹100</td>
+          <td><button class="edit-btn"><i class="far fa-edit"></i></button></td>
+        </tr>
+        <tr>
+          <td>03-19-2025</td>
+          <td>Shopping</td>
+          <td>Clothes</td>
+          <td class="price">₹220</td>
+          <td><button class="edit-btn"><i class="far fa-edit"></i></button></td>
+        </tr>
+        <tr>
+          <td>03-20-2025</td>
+          <td>Entertainment</td>
+          <td>Movie</td>
+          <td class="price">₹15</td>
+          <td><button class="edit-btn"><i class="far fa-edit"></i></button></td>
+        </tr>
+        <tr>
+          <td>03-21-2025</td>
+          <td>Misc</td>
+          <td>Gift</td>
+          <td class="price">₹95</td>
+          <td><button class="edit-btn"><i class="far fa-edit"></i></button></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="pagination">
+      <button>&laquo;</button>
+      <button>&lt;</button>
+      <button class="active">1</button>
+      <button>2</button>
+      <button>3</button>
+      <button>&gt;</button>
+      <button>&raquo;</button>
+    </div>
+  </div>
+  </div>
+
+    <!--Recent Expenses End-->
+
+  <!--CHART SCRIPT STARTS HERE-->  
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="/js/chart.js"></script>
+  <!--CHART SCRIPT STARTS HERE-->  
+    
+</body>
+</html>
