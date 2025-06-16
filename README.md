@@ -1,1 +1,1 @@
-# Gowsi
+# expense category
